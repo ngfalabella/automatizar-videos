@@ -1,11 +1,12 @@
 {
-  "brand": "cliente-demo",
-  "template": "minimal-clean",
-  "duration": 6,
+  "brand": "editorial-demo",
+  "template": "editorial-split",
+  "duration": 9.1,
   "fps": 30,
   "content": {
-    "eyebrow": "DISEÑO EN MOVIMIENTO",
-    "headline": "Ideas simples.\nResultados que se notan.",
-    "subtitle": "Contenido animado limpio, moderno y reutilizable."
+    "eyebrow": "Los referidos",
+    "headline": "son\nbuenos.",
+    "subtitle": "Pero no son un",
+    "secondaryHeadline": "sistema."
   }
 }

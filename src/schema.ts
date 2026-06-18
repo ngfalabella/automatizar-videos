@@ -31,6 +31,7 @@ export const jobSchema = z.object({
     eyebrow: z.string().max(120),
     headline: z.string().trim().min(1).max(280),
     subtitle: z.string().max(320),
+    secondaryHeadline: z.string().max(180).default(""),
   }),
 });
 

@@ -1,0 +1,11 @@
+{
+  "name": "Editorial Demo",
+  "colors": {
+    "background": "#EFEFEF",
+    "surface": "#EFEFEF",
+    "primary": "#5215E7",
+    "secondary": "#5215E7",
+    "text": "#000000",
+    "muted": "#262626"
+  }
+}

@@ -1,5 +1,6 @@
 import "./styles/global.css";
 import "./styles/minimal-clean.css";
+import "./styles/editorial-split.css";
 
 import { aspectRatios, isAspectRatioId } from "./aspect-ratios";
 import { brandSchema, jobSchema } from "./schema";

@@ -1,0 +1,310 @@
+.template-editorial-split {
+  --editorial-grid-size: 107px;
+  --editorial-left-margin: 228px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--background);
+  color: var(--text);
+}
+
+.template-editorial-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.26;
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--text) 12%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--text) 12%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: var(--editorial-grid-size) var(--editorial-grid-size);
+}
+
+.template-editorial-split::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+  background-image:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(0, 0, 0, 0.06) 0.6px,
+      transparent 0.8px
+    ),
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(255, 255, 255, 0.45) 0.7px,
+      transparent 0.9px
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(0, 0, 0, 0.04) 0.5px,
+      transparent 0.7px
+    );
+  background-size:
+    10px 10px,
+    14px 14px,
+    18px 18px;
+}
+
+.template-editorial-split .template-editorial-split__layout {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.template-editorial-split .template-editorial-split__top {
+  position: absolute;
+  top: 252px;
+  left: 50%;
+  width: min(720px, 86%);
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.template-editorial-split .template-editorial-split__eyebrow {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 0 0 18px;
+  color: #000000;
+}
+
+.template-editorial-split .template-editorial-split__eyebrow-word {
+  display: inline-block;
+  font-size: 84px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.template-editorial-split .template-editorial-split__accent-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.template-editorial-split .template-editorial-split__accent-line {
+  margin: 0;
+  color: var(--accent);
+  font-size: 153px;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.78;
+  text-wrap: balance;
+}
+
+.template-editorial-split .template-editorial-split__divider {
+  position: absolute;
+  top: 48.6%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #262626;
+  transform-origin: left center;
+  will-change: transform, clip-path;
+}
+
+.template-editorial-split .template-editorial-split__bottom {
+  position: absolute;
+  top: 1064px;
+  left: var(--editorial-left-margin);
+  right: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.template-editorial-split .template-editorial-split__support {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 18px;
+  margin: 0 0 16px;
+  color: #000000;
+}
+
+.template-editorial-split .template-editorial-split__support-word {
+  display: inline-block;
+  font-size: 84px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.template-editorial-split .template-editorial-split__reveal {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding-right: 18px;
+}
+
+.template-editorial-split .template-editorial-split__secondary-headline {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--accent);
+  font-size: 153px;
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.84;
+  white-space: nowrap;
+}
+
+.template-editorial-split .template-editorial-split__wipe {
+  position: absolute;
+  z-index: 2;
+  inset: -6px 0 -8px;
+  width: 100%;
+  background: var(--accent);
+  pointer-events: none;
+  will-change: clip-path;
+}
+
+/* =========================================================
+   EDITORIAL SPLIT — FORMATO 5:4
+   Centrado horizontal y vertical dentro de cada sector
+   ========================================================= */
+
+html[data-aspect-ratio="5:4"] .template-editorial-split {
+  --editorial-grid-size: 92px;
+}
+
+/* Bloque superior: ocupa desde arriba hasta la línea */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48.6%;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Texto negro superior */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__eyebrow {
+  width: 100%;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+/* Títulos violetas superiores */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__accent-stack {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Línea divisoria */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__divider {
+  top: 48.6%;
+}
+
+/* Bloque inferior: ocupa desde la línea hasta abajo */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__bottom {
+  position: absolute;
+  top: 48.6%;
+  bottom: 0;
+  left: 0;
+  right: auto;
+
+  width: 100%;
+  height: auto;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 6%;
+  text-align: center;
+}
+
+/* Frase negra inferior */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__support {
+  width: 100%;
+  justify-content: center;
+  gap: 14px;
+  margin: 0 0 14px;
+  text-align: center;
+}
+
+/* Palabra sistema */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__reveal {
+  align-self: center;
+  padding-right: 0;
+  text-align: center;
+}
+
+/* Tamaños tipográficos */
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__eyebrow-word {
+  font-size: 64px;
+}
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__accent-line {
+  font-size: 118px;
+  line-height: 0.8;
+}
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__support-word {
+  font-size: 64px;
+}
+
+html[data-aspect-ratio="5:4"]
+  .template-editorial-split
+  .template-editorial-split__secondary-headline {
+  font-size: 118px;
+  line-height: 0.86;
+  text-align: center;
+}

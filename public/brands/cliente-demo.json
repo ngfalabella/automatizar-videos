@@ -1,0 +1,11 @@
+{
+  "name": "Cliente Demo",
+  "colors": {
+    "background": "#0B1020",
+    "surface": "#141B2D",
+    "primary": "#67E8F9",
+    "secondary": "#A78BFA",
+    "text": "#F8FAFC",
+    "muted": "#A8B1C1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "animated-posts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "npm run check && vite build",
+    "check": "tsc --noEmit",
+    "render": "tsx scripts/render.ts"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "playwright": "^1.61.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.16"
+  }
+}
